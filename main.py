@@ -291,7 +291,7 @@ def main():
     abbrev_mapping = {v: k for k, v in airport_mapping.items()}
     st.set_page_config(layout="wide")
     
-    st.title("비행기 지연 확률 예측")
+    st.title("✈️비행기 지연 확률 예측✈️")
 
     airport_options = ['공항을 선택해주세요.'] + list(airport_mapping.values())
 
