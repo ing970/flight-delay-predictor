@@ -5,8 +5,76 @@ from datetime import datetime, time
 import pickle
 
 # 모델 및 레이블 클래스 로드
-model = load('XGBoost_10-23_top6_model.joblib')
-label_classes = load('label_classes.pickle')
+model = load('./XGBoost_10-23_top6_model.joblib')
+label_classes = load('./label_classes.pickle')
+
+# `airport_mapping`정의
+# 키: 공항의 코드
+# 값: 해당 공항의 전체 이름 
+airport_mapping = {'MGM': 'Montgomery Regional Airport',
+ 'BHM': 'Birmingham-Shuttlesworth International Airport',
+ 'HSV': 'Huntsville International Airport',
+ 'MOB': 'Mongomary Regional Airport',
+ 'ANC': 'Ted Stevens Anchorage International Airport',
+ 'PHX': 'Phoenix Sky Harbor International Airport',
+ 'TUS': 'Tucson International Airport',
+ 'LIT': 'Bill and Hillary Clinton National Airport',
+ 'XNA': 'Northwest Arkansas National Airport',
+ 'LAX': 'Los Angeles International Airport',
+ 'SFO': 'San Francisco International Airport',
+ 'OAK': 'Oakland International Airport',
+ 'SAN': 'San Diego International Airport',
+ 'ORD': 'O Hare International Airport',
+ 'MDW': 'Chicago Midway International Airport',
+ 'ATL': 'Hartsfield-Jackson Atlanta International Airport',
+ 'OGG': 'Kahului Airport',
+ 'HNL': 'Daniel K. Inouye International Airport',
+ 'EWR': 'Newark Liberty International Airport',
+ 'JFK': 'John F. Kennedy International Airport',
+ 'LGA': 'LaGuardia Airport',
+ 'SEA': 'Seattle-Tacoma International Airport',
+ 'SLC': 'Salt Lake City International Airport',
+ 'DEN': 'Denver International Airport',
+ 'DFW': 'Dallas/Fort Worth International Airport',
+ 'IAH': 'George Bush Intercontinental Airport',
+ 'MIA': 'Miami International Airport',
+ 'BOS': 'Logan International Airport',
+ 'LAS': 'McCarran International Airport',
+ 'MCI': 'Kansas City International Airport',
+ 'MSP': 'Minneapolis-Saint Paul International Airport',
+ 'BNA': 'Nashville International Airport',
+ 'STL': 'St. Louis Lambert International Airport',
+ 'IAD': 'Washington Dulles International Airport',
+ 'DCA': 'Ronald Reagan Washington National Airport',
+ 'BWI': 'Baltimore/Washington International Thurgood Marshall Airport',
+ 'CLE': 'Cleveland Hopkins International Airport',
+ 'CVG': 'Cincinnati/Northern Kentucky International Airport',
+ 'TPA': 'Tampa International Airport',
+ 'IND': 'Indianapolis International Airport',
+ 'RDU': 'Raleigh-Durham International Airport',
+ 'CLT': 'Charlotte Douglas International Airport',
+ 'PDX': 'Portland International Airport',
+ 'GEG': 'Spokane International Airport',
+ 'SMF': 'Sacramento International Airport',
+ 'MEM': 'Memphis International Airport',
+ 'SJC': 'Norman Y. Mineta San Jose International Airport',
+ 'DAL': 'Dallas Love Field',
+ 'HOU': 'William P. Hobby Airport',
+ 'FLL': 'Fort Lauderdale-Hollywood International Airport',
+ 'MCO': 'Orlando International Airport',
+ 'PIT': 'Pittsburgh International Airport',
+ 'PHL': 'Philadelphia International Airport',
+ 'SJU': 'Luis Muñoz Marín International Airport',
+ 'DHN': 'DHN',
+ 'BFM': 'BFM',
+ 'RKS': 'RKS',
+ 'CPR': 'CPR',
+ 'COD': 'COD',
+ 'JAC': 'JAC',
+ 'GCC': 'GCC',
+ 'LAR': 'LAR',
+ 'CYS': 'CYS'}
+
 
 # 레이블 인코딩 함수
 def encode_label(label, label_class):
@@ -140,14 +208,14 @@ def convert_time_to_part_of_day(minutes):
 # 출발/도착 공항 정보로 '거리'(평균) 반환
 def get_distance_from_airport(origin_airport, destination_airport):
     DEFAULT_DISTANCE = 784.0979072608434
-    with open('distance_dict.pkl', 'rb') as f:  # 'rb' denotes read in binary mode
+    with open('./distance_dict.pkl', 'rb') as f:  # 'rb' denotes read in binary mode
         distance_dict = pickle.load(f)
     return distance_dict.get((origin_airport, destination_airport), DEFAULT_DISTANCE)
 
 # 출발/도착 공항 정보로 '비행시간/Time' (평균) 반환
 def get_flight_time(origin_airport, destination_airport):
     DEFAULT_FLIGHT_TIME = 140.65164602121513
-    with open('time_dict.pkl', 'rb') as f:  # 'rb' denotes read in binary mode
+    with open('./time_dict.pkl', 'rb') as f:  # 'rb' denotes read in binary mode
         time_dict = pickle.load(f)
     return time_dict.get((origin_airport, destination_airport), DEFAULT_FLIGHT_TIME)
 
@@ -218,83 +286,6 @@ def prepare_input_data(departure_airport, arrival_airport, departure_date, depar
         input_data[idx] = encode_label(input_data[idx], label_classes[column])
 
     return input_data
-
-# # 주어진 입력 데이터를 확장하여 모델의 입력 차원에 맞게 조정합니다.
-# def expand_input_data(input_data):
-   
-#     # 모델이 기대하는 특성의 수
-#     expected_features = 18
-    
-#     # 누락된 특성을 0으로 채웁니다.
-#     expanded_data = np.zeros(expected_features)
-#     expanded_data[:len(input_data)] = input_data
-    
-#     return expanded_data
-
-airport_mapping = {'MGM': 'Montgomery Regional Airport',
- 'BHM': 'Birmingham-Shuttlesworth International Airport',
- 'HSV': 'Huntsville International Airport',
- 'MOB': 'Mongomary Regional Airport',
- 'ANC': 'Ted Stevens Anchorage International Airport',
- 'PHX': 'Phoenix Sky Harbor International Airport',
- 'TUS': 'Tucson International Airport',
- 'LIT': 'Bill and Hillary Clinton National Airport',
- 'XNA': 'Northwest Arkansas National Airport',
- 'LAX': 'Los Angeles International Airport',
- 'SFO': 'San Francisco International Airport',
- 'OAK': 'Oakland International Airport',
- 'SAN': 'San Diego International Airport',
- 'ORD': 'O Hare International Airport',
- 'MDW': 'Chicago Midway International Airport',
- 'ATL': 'Hartsfield-Jackson Atlanta International Airport',
- 'OGG': 'Kahului Airport',
- 'HNL': 'Daniel K. Inouye International Airport',
- 'EWR': 'Newark Liberty International Airport',
- 'JFK': 'John F. Kennedy International Airport',
- 'LGA': 'LaGuardia Airport',
- 'SEA': 'Seattle-Tacoma International Airport',
- 'SLC': 'Salt Lake City International Airport',
- 'DEN': 'Denver International Airport',
- 'DFW': 'Dallas/Fort Worth International Airport',
- 'IAH': 'George Bush Intercontinental Airport',
- 'MIA': 'Miami International Airport',
- 'BOS': 'Logan International Airport',
- 'LAS': 'McCarran International Airport',
- 'MCI': 'Kansas City International Airport',
- 'MSP': 'Minneapolis-Saint Paul International Airport',
- 'BNA': 'Nashville International Airport',
- 'STL': 'St. Louis Lambert International Airport',
- 'IAD': 'Washington Dulles International Airport',
- 'DCA': 'Ronald Reagan Washington National Airport',
- 'BWI': 'Baltimore/Washington International Thurgood Marshall Airport',
- 'CLE': 'Cleveland Hopkins International Airport',
- 'CVG': 'Cincinnati/Northern Kentucky International Airport',
- 'TPA': 'Tampa International Airport',
- 'IND': 'Indianapolis International Airport',
- 'RDU': 'Raleigh-Durham International Airport',
- 'CLT': 'Charlotte Douglas International Airport',
- 'PDX': 'Portland International Airport',
- 'GEG': 'Spokane International Airport',
- 'SMF': 'Sacramento International Airport',
- 'MEM': 'Memphis International Airport',
- 'SJC': 'Norman Y. Mineta San Jose International Airport',
- 'DAL': 'Dallas Love Field',
- 'HOU': 'William P. Hobby Airport',
- 'FLL': 'Fort Lauderdale-Hollywood International Airport',
- 'MCO': 'Orlando International Airport',
- 'PIT': 'Pittsburgh International Airport',
- 'PHL': 'Philadelphia International Airport',
- 'SJU': 'Luis Muñoz Marín International Airport',
- 'DHN': 'DHN',
- 'BFM': 'BFM',
- 'RKS': 'RKS',
- 'CPR': 'CPR',
- 'COD': 'COD',
- 'JAC': 'JAC',
- 'GCC': 'GCC',
- 'LAR': 'LAR',
- 'CYS': 'CYS'}
-
 
 def main():
     abbrev_mapping = {v: k for k, v in airport_mapping.items()}
