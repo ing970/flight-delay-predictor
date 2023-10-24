@@ -1,6 +1,7 @@
 # flight-delay-predictor
 
 미국 항공기 연착 예측을 위한 Streamlit 웹 애플리케이션입니다.
+- https://flight-delay-predictor.streamlit.app/
 
 ## 주요 특징:
 - XGBoost 모델을 사용하여 연착을 예측합니다.
@@ -12,6 +13,7 @@
 
 ## 데이터 출처:
 본 프로젝트에서 사용된 데이터는 Dacon의 "월간 데이콘 항공편 지연 예측 AI 경진대회"에서 제공된 데이터를 활용하였습니다.
+- https://dacon.io/competitions/official/236094/overview/description
 
 ## 데이터 파일 설명:
 - `label_classes.pickle`: 레이블 클래스 정보가 포함된 파일입니다.
