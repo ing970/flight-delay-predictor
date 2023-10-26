@@ -338,9 +338,12 @@ def main():
         st.write(f"비행기 지연 확률: {delay_probability:.2%}")
 
         if delay_probability >= 0.6:
-            st.write("높은 확률로 비행이 지연될 수 있습니다.")
+            st.write("지연 안전도 높음! 높은 확률로 비행이 지연될 수 있습니다.")
+        elif delay_probability <= 0.4:
+            st.write("지연 안전도 낮음!")
         else:
-            st.write("높은 확률로 비행이 정시에 출발할 수 있습니다.")
+            st.write("지연 안전도 보통")
+     
 
 if __name__ == '__main__':
     main()
