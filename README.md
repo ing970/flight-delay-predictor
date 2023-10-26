@@ -1,5 +1,5 @@
 # flight-delay-predictor
-<img src="https://raw.githubusercontent.com/ing970/flight-delay-predictor/main/assets/70427747/4a47bd95-f557-4a82-973f-aac7bde630d4" alt="DALL·E 2023-10-25 10 22 15 - Illustration" width="250" height="250"/>
+<img width="369" alt="img" src="https://github.com/ing970/flight-delay-predictor/assets/70427747/73555579-1bad-4cc7-b540-25e261606456">
 
 미국 항공기 연착 예측을 위한 Streamlit 웹 애플리케이션입니다.
 - https://flight-delay-predictor.streamlit.app/
