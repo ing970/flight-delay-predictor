@@ -1,4 +1,5 @@
 # flight-delay-predictor
+![DALL·E 2023-10-25 10 22 15 - Illustration in a cartoon style showing a busy airport runway filled with multiple airplanes awaiting their turn to take off  Amidst this, one airplan](https://github.com/ing970/flight-delay-predictor/assets/70427747/4a47bd95-f557-4a82-973f-aac7bde630d4)
 
 미국 항공기 연착 예측을 위한 Streamlit 웹 애플리케이션입니다.
 - https://flight-delay-predictor.streamlit.app/
