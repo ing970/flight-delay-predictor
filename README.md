@@ -9,7 +9,8 @@
 - 공항 코드를 기반으로 해당하는 주(State)의 정보를 제공합니다.
 
 ## 사용 예시:
-![사용방법](https://github.com/ing970/flight-delay-predictor/assets/120775224/0c64f893-7c4c-47dd-9008-b8a9db183335)
+![사용방법](https://github.com/ing970/flight-delay-predictor/assets/120775224/99d3ea8f-35bd-40cf-b06d-15cf96a58c33)
+
 
 ## 사용 방법:
 1. 필요한 패키지를 설치합니다: `pip install streamlit xgboost joblib`
