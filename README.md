@@ -9,7 +9,7 @@
 - 공항 코드를 기반으로 해당하는 주(State)의 정보를 제공합니다.
 
 ## 사용 예시:
-![사용방법](https://github.com/ing970/flight-delay-predictor/assets/120775224/99d3ea8f-35bd-40cf-b06d-15cf96a58c33)
+![사용방법](https://github.com/ing970/flight-delay-predictor/assets/120775224/adf459ee-59c0-436a-8e67-2206ddbba18d)
 
 
 ## 사용 방법:
