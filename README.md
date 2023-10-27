@@ -13,7 +13,7 @@
 
 
 ## 사용 방법:
-1. 필요한 패키지를 설치합니다: `pip install streamlit xgboost`
+1. 필요한 패키지를 설치합니다: `pip install streamlit xgboost joblib`
 2. 애플리케이션을 실행합니다: `streamlit run main.py`
 
 ## 데이터 출처:
