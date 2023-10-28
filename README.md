@@ -23,16 +23,16 @@
 
 ## 📌 Contents
 1. **Data Preprocessing**: 데이터 전처리 과정은 `0_preprocessing.ipynb` 파일에서 확인 가능합니다.
-  - 원본 데이터 출처: 월간 데이콘 항공편 지연 예측 AI 경진대회
-  - 원활한 EDA를 위한 초기 전처리 단계 포함
-  - `distance_dict.pkl` 및 `time_dict.pkl`: 전처리에 사용된 추가 데이터 및 유틸리티
-2. **Exploratory Data Analysis (EDA)**: 탐색적 데이터 분석 과정은 1_EDA.ipynb에서 확인할 수 있습니다.
-  - Label 불균형 분석
-  - 항공사별 지연 비율 분석
+    - 원본 데이터 출처: 월간 데이콘 항공편 지연 예측 AI 경진대회
+    - 원활한 EDA를 위한 초기 전처리 단계 포함
+    - `distance_dict.pkl` 및 `time_dict.pkl`: 전처리에 사용된 추가 데이터 및 유틸리티
+2. **Exploratory Data Analysis (EDA)**: 탐색적 데이터 분석 과정은 `1_EDA.ipynb`에서 확인할 수 있습니다.
+    - Label 불균형 분석
+    - 항공사별 지연 비율 분석
 3. **Modeling**: 모델링 과정은 `2_model.ipynb`에서 살펴볼 수 있습니다.
-  - 사용한 모델: XGBoost
-  - 범주형 변수의 label encoding을 활용하여 모델 학습
-  - `**label_classes.pickle**`: 레이블 클래스 정보가 포함된 파일
-4. **Prediction Application**: `**main.py**`를 통해 항공편 지연 예측 애플리케이션을 실행할 수 있습니다.
-  - 사용된 플랫폼: Streamlit
-  - 공항 코드와 전체 이름에 대한 매핑 정보 포함
+    - 사용한 모델: XGBoost
+    - 범주형 변수의 label encoding을 활용하여 모델 학습
+    - `label_classes.pickle`: 레이블 클래스 정보가 포함된 파일
+4. **Prediction Application**: `main.py`를 통해 항공편 지연 예측 애플리케이션을 실행할 수 있습니다.
+    - 사용된 플랫폼: Streamlit
+    - 공항 코드와 전체 이름에 대한 매핑 정보 포함
