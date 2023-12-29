@@ -75,17 +75,36 @@ Through these steps, the project aimed to create a reliable and user-friendly to
 ## 3. Data Analysis Insights
 - **There is significant imbalance in the data.**
     - The smaller number of 'delayed flights' in our data could negatively impact the model. Requires a balanced sampling method.
-     
+  
+<div align="center">
+    <img width="369" alt="img" src="assets/fig01.png">
+</div>     
+
 -  **Delay rates significantly differ among airlines.**
     - Among the Top 6 (Southwest, Delta, Skywest, United, American, JetBlue), **JetBlue Airways (24.7%)** has the greatest delay rate.
+      
+<div align="center">
+    <img width="369" alt="img" src="assets/fig02.png">
+</div>    
 
 - **"Big states" have greater delays.**
     - These are most often states with biggest air traffic.
- 
+      
+ <div align="center">
+    <img width="369" alt="img" src="assets/fig03.png">
+</div>    
+
 - **Summer and winter seasons have more delays.**
-    - While our data does not contain explicit weather conditions, it is possible that seasonal effects are present (i.e., weather, holidays, etc.)   
+    - While our data does not contain explicit weather conditions, it is possible that seasonal effects are present (i.e., weather, holidays, etc.)
+        
+<div align="center">
+    <img width="369" alt="img" src="assets/fig04.png">
+</div>    
 
 - **Most delays take place during evening-early morning flights (18 - 06).**
+<div align="center">
+    <img width="369" alt="img" src="assets/fig05.png">
+</div>   
 
 ## 4. Model Deployment (Streamlit)
 
