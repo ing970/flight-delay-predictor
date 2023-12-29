@@ -8,7 +8,7 @@ https://docs.google.com/presentation/d/1VkzbZx9s_O6xM7_YcQdEBcQiKSCDDxAEzm8sDNFv
 
 ## 0. Project Summary
 - Addressing the persistent issue of domestic flight delays in the United States, this project aims to mitigate the inconvenience and economic impact caused by these delays through a predictive model, enhancing operational efficiency for airlines and improving travel experiences for passengers.
-- This project involves a Streamlit web application designed for predicting flight delays in the United States, utilizing an XGBoost model for accurate predictions and providing additional information based on airport codes.
+- This project involves a Streamlit web application designed for predicting flight delays in the United States, utilizing an XGBoost model for accurate predictions.
 - The application is user-friendly and accessible online, with comprehensive data preprocessing, exploratory data analysis, and modeling steps documented in separate Jupyter notebooks, ensuring transparency and ease of understanding for users and developers.
 - Application prototype created using Streamlit: https://flight-delay-predictor.streamlit.app/
 
