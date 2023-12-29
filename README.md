@@ -73,7 +73,19 @@ The motivation behind this project is to address these multifaceted challenges b
 Through these steps, the project aimed to create a reliable and user-friendly tool for predicting flight delays, thereby addressing a significant business challenge in the aviation industry. The combination of thorough data preprocessing, insightful exploratory analysis, strategic feature engineering, and careful model selection and tuning culminated in a practical solution for real-world application.
 
 ## 3. Data Analysis Insights
-(fill)
+- **There is significant imbalance in the data.**
+    - The smaller number of 'delayed flights' in our data could negatively impact the model. Requires a balanced sampling method.
+     
+-  **Delay rates significantly differ among airlines.**
+    - Among the Top 6 (Southwest, Delta, Skywest, United, American, JetBlue), **JetBlue Airways (24.7%)** has the greatest delay rate.
+
+- **"Big states" have greater delays.**
+    - These are most often states with biggest air traffic.
+ 
+- **Summer and winter seasons have more delays.**
+    - While our data does not contain explicit weather conditions, it is possible that seasonal effects are present (i.e., weather, holidays, etc.)   
+
+- **Most delays take place during evening-early morning flights (18 - 06).**
 
 ## 4. Model Deployment (Streamlit)
 
