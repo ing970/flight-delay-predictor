@@ -2,8 +2,8 @@
 <div align="center">
     <img width="369" alt="img" src="https://github.com/ing970/flight-delay-predictor/assets/70427747/73555579-1bad-4cc7-b540-25e261606456">
 </div>
-- 프로젝트 원문(영어) 버전 링크: https://github.com/dchlseo/flight-delay-predictor/blob/main/README.md
 
+- 프로젝트 원문(영어) 버전 링크: https://github.com/dchlseo/flight-delay-predictor/blob/main/README.md
 - 프로젝트 구글 슬라이드(Google Slide) 링크: https://docs.google.com/presentation/d/1VkzbZx9s_O6xM7_YcQdEBcQiKSCDDxAEzm8sDNFvJso/edit#slide=id.p
 
 ## 0. 프로젝트 요약 (Project Summary)
