@@ -4,7 +4,7 @@
 </div>
 
 - 프로젝트 원문(영어) 버전 링크: https://github.com/dchlseo/flight-delay-predictor/blob/main/README.md
-- 프로젝트 구글 슬라이드(Google Slide) 링크: https://docs.google.com/presentation/d/1VkzbZx9s_O6xM7_YcQdEBcQiKSCDDxAEzm8sDNFvJso/edit#slide=id.p
+- Google Slide 링크: https://docs.google.com/presentation/d/1VkzbZx9s_O6xM7_YcQdEBcQiKSCDDxAEzm8sDNFvJso/edit#slide=id.p
 
 ## 0. 프로젝트 요약 (Project Summary)
 - 미국 국내 항공편 지연 문제로 인한 불편함과 경제적 영향을 완화하기 위한 머신러닝 예측 모델 개발을 목표로 한다. 이를 통해 항공사의 운영 효율성을 향상시키고 승객들의 여행 경험을 개선하는 데 기여할 수 있을 것으로 기대한다.
