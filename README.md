@@ -175,7 +175,3 @@ In conclusion, the Flight Delay Predictor is more than just a tool for predictin
 4. **Prediction Application**: The flight delay prediction application can be executed through `main.py`.
     - Platform used: Streamlit
     - Includes mapping information for airport codes and their full names
-
-This section provides a comprehensive overview of the model deployment using Streamlit, including details on usage, contents, and specific processes involved in the project.
-
-
